@@ -62,7 +62,7 @@ public class PaisResource {
 			@ApiResponse(code = 500, message = "Internal Server Error", response = ApiError.class) 
 	})
 	@GetMapping(value = "/{pais}")
-	public ResponseEntity<PaisDTO> findById(@PathVariable("pais") String pais) throws ResourceAccessException {
+	public ResponseEntity<PaisDTO> findByName(@PathVariable("pais") String pais) throws ResourceAccessException {
 
 		Pais response = restTemplate.getForObject(url + "/{countrycode}", Pais.class, pais);
 		return new ResponseEntity<PaisDTO>(paisMapper.entityToDTO(response), HttpStatus.OK);
