@@ -17,7 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import api.rest.pais.domain.Pais;
 import api.rest.pais.dto.PaisDTO;
 import api.rest.pais.exception.ResourceAccessException;
-import api.rest.pais.hadler.ApiError;
+import api.rest.pais.handler.ApiError;
 import api.rest.pais.mapper.PaisMapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
